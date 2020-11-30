@@ -27,7 +27,7 @@ const Rating = ({value, text, color}) => {
     )
 }
 
-// set default props
+// set default values for props
 Rating.defaultProps ={
     color: '#f8e825'
 }

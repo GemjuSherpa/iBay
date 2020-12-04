@@ -26,12 +26,12 @@ const productSchema = mongoose.Schema({
         required: true
     },
     brand: {
-        type: Boolean,
+        type: String,
         required: true,
         default: false
     },
     category: {
-        type: Boolean,
+        type: String,
         required: true
     },
     description: {

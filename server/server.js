@@ -6,6 +6,7 @@ import colors from 'colors'
 import {notFound, errorHandler} from './middleware/errorMiddleware.js'
 
 import productRoutes from './routes/productRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 
 
 //Initialize dotenv
@@ -16,6 +17,8 @@ connectDB()
 
 const app = express()
 
+app.use(express.json())
+
 // Test route
 app.get('/', (req, res)=>{
     res.send('API is running ..')
@@ -23,6 +26,9 @@ app.get('/', (req, res)=>{
 
 // routes pointer
 app.use('/api/products', productRoutes)
+
+// user auth route
+app.use('/api/users', userRoutes)
 
 //fall back 
 app.use(notFound)

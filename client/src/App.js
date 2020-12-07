@@ -5,20 +5,25 @@ import {Container} from 'react-bootstrap'
 import HomeScreen from './components/HomeScreen'
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 import ProductScreen from './screens/ProductScreen'
+import CartScreen from './screens/CartScreen'
 
 const App = () => {
   return (
     <Router>
         <Header/>
-        <Container>
         
-          <main>
-            <Route path="/" component={HomeScreen} exact></Route>
-            <Route path ="/product/:id" component={ProductScreen}></Route>
+        
+          <main className='py-3'>
+            <Container>            
+              <Route path="/" component={HomeScreen} exact></Route>
+              <Route path ="/product/:id" component={ProductScreen}></Route>
+              <Route path ="/cart/:id?" component={CartScreen}></Route>
+            </Container> 
           </main>
+          
           <Footer/>
           
-        </Container> 
+        
     </Router>
   )
 }

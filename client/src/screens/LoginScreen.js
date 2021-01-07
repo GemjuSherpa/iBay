@@ -25,7 +25,7 @@ const LoginScreen = ({location, history}) => {
   
     useEffect(() => {
 
-        if(userInfo == null){   //Issue:  Somethings not right => userInfo should not be null to redirect, instead, other way arround. 
+        if(userInfo){
             history.push(redirect)
         }
         

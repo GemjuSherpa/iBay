@@ -43,10 +43,7 @@ const RegisterScreen = ({location, history}) => {
             // dispatch register
             dispatch(register(name, email, password))
         }
-        
-
     }
-
 
     return (
        <FormContainer>
